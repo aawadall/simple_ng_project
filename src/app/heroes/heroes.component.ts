@@ -13,12 +13,13 @@ import { MessageService } from "../message.service";
 // note we export the component 
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
-  selectedHero?: Hero;
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+
   constructor(private heroService: HeroService, private messageService: MessageService) {}
+  //selectedHero?: Hero;
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  // }
 
   // lifecycle hook, this is called shortly after creating the component 
   // good for initialization code 
